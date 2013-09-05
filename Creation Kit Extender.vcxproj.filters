@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp" />
+    <ClCompile Include="EditorAPI\ExtraDataList.cpp">
+      <Filter>EditorAPI\System\ExtraData</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorAPI\BSSystem.cpp">
+      <Filter>EditorAPI\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorAPI\MemoryHeap.cpp">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorAPI\TES.cpp">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorAPI\TESDataHandler.cpp">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorAPI\TESDialog.cpp">
+      <Filter>EditorAPI\System\CK Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorAPI\SettingCollection.cpp">
+      <Filter>EditorAPI\System\Settings</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorAPI\RTTI.cpp">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CKEConsole.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CKEMain.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CKESettings.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CKEUIManager.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="..\..\[Libraries]\SME Sundries\INIEditGUI_Res.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="VersionInfo.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\skse\skse\PluginAPI.h">
+      <Filter>SKSE</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\ExtraData.h">
+      <Filter>EditorAPI\System\ExtraData</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\ExtraDataList.h">
+      <Filter>EditorAPI\System\ExtraData</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\BSSystem.h">
+      <Filter>EditorAPI\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\BSString.h">
+      <Filter>EditorAPI\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\NiTMap.h">
+      <Filter>EditorAPI\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\NiTypes.h">
+      <Filter>EditorAPI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\BSFile.h">
+      <Filter>EditorAPI\System\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\MemoryHeap.h">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\TES.h">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\TESDataHandler.h">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\TESDialog.h">
+      <Filter>EditorAPI\System\CK Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\TESFile.h">
+      <Filter>EditorAPI\System\I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\TESForm.h">
+      <Filter>EditorAPI\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\BaseFormComponent.h">
+      <Filter>EditorAPI\Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\ActorValue.h">
+      <Filter>EditorAPI\Forms\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\Setting.h">
+      <Filter>EditorAPI\System\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\BSTCaseInsensitiveStringMap.h">
+      <Filter>EditorAPI\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\SettingCollection.h">
+      <Filter>EditorAPI\System\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\TESEditorAPI.h">
+      <Filter>EditorAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\NiClasses.h">
+      <Filter>EditorAPI\System</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\RTTI.h">
+      <Filter>EditorAPI\System\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CKEConsole.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CKEMain.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CKESettings.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CKEUIManager.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\BSSimpleList.h">
+      <Filter>EditorAPI\Types</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\[Libraries]\SME Sundries\INIEditGUI_Res.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="VersionInfo.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{260bbae3-ad46-403e-a802-808396456711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SKSE">
+      <UniqueIdentifier>{a6ed31d5-7f46-46cd-8c70-655df3dcb2ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{b54a16de-ec8a-4098-9f30-9dc38289310f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI">
+      <UniqueIdentifier>{88bf382f-5636-46f5-b159-188ac490221c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooks">
+      <UniqueIdentifier>{48b60498-0740-4059-9ea7-284368a2f790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\Types">
+      <UniqueIdentifier>{1995c4ab-1a3a-4afb-8f5f-251fa54a1c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\Forms">
+      <UniqueIdentifier>{08f58287-3ba9-4941-b4b5-016d62f6a646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\System">
+      <UniqueIdentifier>{2303de1a-dde1-4111-b9f2-fcadbf14b73d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\System\Core">
+      <UniqueIdentifier>{08ab6ac1-1765-49b1-aa4a-7f12516f3c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\System\CK Dialogs">
+      <UniqueIdentifier>{6d52e132-145a-4286-8bd2-461436c16a64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\System\I/O">
+      <UniqueIdentifier>{944b273b-bfaa-46f1-a596-20478787640b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\System\Settings">
+      <UniqueIdentifier>{54bd941d-eb20-4948-b52f-e972256783bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\System\ExtraData">
+      <UniqueIdentifier>{00ad68e7-9e09-4cae-9723-dbf7bd0578ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\Forms\Actors">
+      <UniqueIdentifier>{ed7b104d-ae4f-414a-942d-56a17dd4f9f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EditorAPI\BSTArray.h">
+      <Filter>EditorAPI\Types</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+To-Do
+=====
+
+IMMEDIATE  >>
+			> Implement COEF's BSSimpleList class 
+			> Expand BSTArray
+
+NOTE	---->
+
+
+MISC	---->
+
+
+CKE	---->
+
+	BUGFIX			=
+		
+
+
+	ENHANCEMENT		=
+
+
+
+	CODA			=
+
+
+	
+	MISC			=
+
+
+
