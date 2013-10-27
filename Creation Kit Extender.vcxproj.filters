@@ -38,6 +38,9 @@
     <ClCompile Include="CKEUIManager.cpp">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="EditorAPI\NiRenderer.cpp">
+      <Filter>EditorAPI\System\NetImmerse</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StdAfx.h" />
@@ -64,9 +67,6 @@
     </ClInclude>
     <ClInclude Include="EditorAPI\NiTMap.h">
       <Filter>EditorAPI\Types</Filter>
-    </ClInclude>
-    <ClInclude Include="EditorAPI\NiTypes.h">
-      <Filter>EditorAPI\System</Filter>
     </ClInclude>
     <ClInclude Include="EditorAPI\BSFile.h">
       <Filter>EditorAPI\System\I/O</Filter>
@@ -107,9 +107,6 @@
     <ClInclude Include="EditorAPI\TESEditorAPI.h">
       <Filter>EditorAPI</Filter>
     </ClInclude>
-    <ClInclude Include="EditorAPI\NiClasses.h">
-      <Filter>EditorAPI\System</Filter>
-    </ClInclude>
     <ClInclude Include="EditorAPI\RTTI.h">
       <Filter>EditorAPI\System\Core</Filter>
     </ClInclude>
@@ -127,6 +124,15 @@
     </ClInclude>
     <ClInclude Include="EditorAPI\BSSimpleList.h">
       <Filter>EditorAPI\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\NiClasses.h">
+      <Filter>EditorAPI\System\NetImmerse</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\NiTypes.h">
+      <Filter>EditorAPI\System\NetImmerse</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorAPI\NiRenderer.h">
+      <Filter>EditorAPI\System\NetImmerse</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +185,9 @@
     </Filter>
     <Filter Include="EditorAPI\Forms\Actors">
       <UniqueIdentifier>{ed7b104d-ae4f-414a-942d-56a17dd4f9f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditorAPI\System\NetImmerse">
+      <UniqueIdentifier>{ed27ca52-0a41-4887-947a-7924dfe25781}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

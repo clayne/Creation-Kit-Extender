@@ -41,7 +41,7 @@ public:
 	// members
 	//     /*00*/ void**		vtbl
 	
-	virtual void				Dtor(bool ReleaseMemory);
+	virtual ~BaseFormComponent();
 };
 STATIC_ASSERT(sizeof(BaseFormComponent) == 0x4);
 
@@ -466,7 +466,7 @@ public:
 	/*0B*/ UInt8					pad0B;
 	/*0C*/ TESGlobal*				global;
 };
-STATIC_ASSERT(sizeof(TESLeveledList) == 0xC);
+STATIC_ASSERT(sizeof(TESLeveledList) == 0x10);
 
 // 10
 class TESProduceForm : public BaseFormComponent
@@ -578,7 +578,7 @@ public:
 	// members
 	//     /*00*/ BaseFormComponent
 	/*04*/ ReactionListT			reactionList;
-	/*0C*/ UInt8					unk0C;			// intialized to 11
+	/*0C*/ UInt8					unk0C;			// initialized to 11
 	/*0D*/ UInt8					pad0D[3];
 };
 STATIC_ASSERT(sizeof(TESReactionForm) == 0x10);

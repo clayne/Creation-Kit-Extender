@@ -138,10 +138,19 @@ class TESRegionList;
 class TESRegionDataManager;
 class TESRegionDataManagerEditor;		// derives from TESRegionDataManager
 
-// 04+?
+// 04
 struct TESDataHandlerEditorEvent
 {
-	/*00*/ UInt32				unk00;
+	enum
+	{
+		kType_SaveActivePluginStart		= 0,
+		kType_SaveActivePluginEnd,
+		kType_CloseOpenPlugins,
+
+		kType__MAX
+	};
+
+	/*00*/ UInt32				type;
 };
 
 // AE8+?, probably no larger
@@ -164,11 +173,11 @@ public:
 															//		kFormType_GameSetting				- Always empty, objects are registered to the GameSettingCollection singleton
 															//		kFormType_EffectSetting				- Always empty, objects are stored in a separate linked list
 															//		kFormType_ActorValueInfo			- Always empty, objects are stored in a statically allocated array
-															//		kFormType_Cell/AddonNode			- Only exterior cells?/?
+															//		kFormType_Cell/AddonNode			- Only exterior cells/Always empty
 	/*68C*/ TESRegionList*									regionList;
-	/*690*/ NiTPrimitiveArray<TESObjectCELL*>				unk690;					// interior cells only?
-	/*6A0*/ NiTPrimitiveArray<BGSAddonNode*>				unk6A0;
-	/*6B0*/ UnknownArrayT									unk6B0;					// garbage array for invalid/unsupported forms?
+	/*690*/ NiTPrimitiveArray<TESObjectCELL*>				interiorCells;
+	/*6A0*/ NiTPrimitiveArray<BGSAddonNode*>				addonNodes;				// addon nodes need to have unique "indices" apparently
+	/*6B0*/ UnknownArrayT									garbageArray;			// garbage array for invalid/unsupported forms (mostly bad TESObjectREFR types)
 	/*6BC*/ UInt32											nextFormID;
 	/*6C0*/ TESFile*										activeFile;
 	/*6C4*/ PluginFileListT									fileList;				// all files in Data\ directory
@@ -182,7 +191,7 @@ public:
 	/*AD3*/ UInt8											unkAD3;
 	/*AD4*/ UInt8											loadingPlugins;			// set to 1 when loading plugins, reset before post-load init
 	/*AD5*/ UInt8											unkAD5;
-	/*AD6*/ UInt8											unkAD6;
+	/*AD6*/ UInt8											unkAD6;					// set in TESDataHandler::ConstructTESForm
 	/*AD7*/ UInt8											unkAD7;
 	/*AD8*/ UInt8											unkAD8[4];
 	/*ADC*/ TESRegionDataManagerEditor*						regionDataManager;

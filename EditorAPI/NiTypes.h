@@ -12,7 +12,7 @@ public:
 	/*04*/ T*					entries;
 	/*08*/ UInt16				unk08;
 	/*0A*/ UInt16				unk0A;
-	/*0C*/ UInt16				unk0C;
+	/*0C*/ UInt16				count;
 	/*0E*/ UInt16				unk0E;		// grow size?
 
 	virtual ~NiTPrimitiveArray();

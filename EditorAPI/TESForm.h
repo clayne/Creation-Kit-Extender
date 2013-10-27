@@ -177,6 +177,7 @@ public:
 		kFormFlags_Unk06						= 1 << 6,
 		kFormFlags_Unk08						= 1 << 8,
 		kFormFlags_Unk09						= 1 << 9,
+		kFormFlags_QuestItem					= 1 << 10,
 		kFormFlags_Temporary					= 1 << 14,
 		kFormFlags_Unk17						= 1 << 17,
 		kFormFlags_Unk19						= 1 << 19,

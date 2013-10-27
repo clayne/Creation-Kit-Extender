@@ -178,6 +178,7 @@
     <ClCompile Include="EditorAPI\BSSystem.cpp" />
     <ClCompile Include="EditorAPI\ExtraDataList.cpp" />
     <ClCompile Include="EditorAPI\MemoryHeap.cpp" />
+    <ClCompile Include="EditorAPI\NiRenderer.cpp" />
     <ClCompile Include="EditorAPI\RTTI.cpp" />
     <ClCompile Include="EditorAPI\SettingCollection.cpp" />
     <ClCompile Include="EditorAPI\TES.cpp" />
@@ -206,6 +207,7 @@
     <ClInclude Include="EditorAPI\ExtraDataList.h" />
     <ClInclude Include="EditorAPI\MemoryHeap.h" />
     <ClInclude Include="EditorAPI\NiClasses.h" />
+    <ClInclude Include="EditorAPI\NiRenderer.h" />
     <ClInclude Include="EditorAPI\NiTMap.h" />
     <ClInclude Include="EditorAPI\NiTypes.h" />
     <ClInclude Include="EditorAPI\RTTI.h" />
