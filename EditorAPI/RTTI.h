@@ -8,6 +8,7 @@ void*	NetImmerse_InheritanceMatch(const NiRTTI* ToType, void* SrcObj);
 #define CK_CAST(obj, from, to)			(to *)Skyrim_DynamicCast((void*)(obj), 0, RTTI_ ## from, RTTI_ ## to, 0)
 #define NI_CAST(obj, to)				(to *)NetImmerse_InheritanceMatch(NiRTTI_ ## to, (void*)obj)
 
+#if 0
 // 08
 class NiRTTI
 {
@@ -17,7 +18,7 @@ public:
 	/*04*/ NiRTTI*				parentClass;
 };
 STATIC_ASSERT(sizeof(NiRTTI) == 0x08);
-
+#endif
 
 // NiRTTI
 extern const NiRTTI* NiRTTI_BGSDecalNode;

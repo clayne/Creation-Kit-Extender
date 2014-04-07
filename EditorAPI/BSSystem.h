@@ -89,6 +89,6 @@ public:
 
 	virtual ~BSTEventSink();
 
-	virtual	EventResult					ReceiveEvent(T* eventArgs, BSTEventDispatcher<T>* dispatcher) = 0;
+	virtual	EventResult					ReceiveEvent(T* eventArgs, BSTEventSource<T>* dispatcher) = 0;
 };
 STATIC_ASSERT(sizeof(BSTEventSink<void*>) == 0x4);

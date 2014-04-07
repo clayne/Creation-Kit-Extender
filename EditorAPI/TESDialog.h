@@ -35,6 +35,6 @@ public:
 	/*08*/ Vector3						selectionPositionVectorSum;				// calculated for references
 	/*14*/ float						selectionBounds;						// calculated for references
 
-	static TESObjectSelection**			PrimaryInstance;
+	static TESObjectSelection**			Singleton;
 };
 STATIC_ASSERT(sizeof(TESObjectSelection) == 0x18);

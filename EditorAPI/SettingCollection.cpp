@@ -1,4 +1,5 @@
 #include "SettingCollection.h"
+#include "SKSE\GameTypes.h"
 
 INISettingCollection**				INISettingCollection::Instance = (INISettingCollection**)VOLATILE(0x01B5A6B8);
 INIPrefSettingCollection**			INIPrefSettingCollection::Instance = (INIPrefSettingCollection**)VOLATILE(0x01B55D8C);
@@ -7,7 +8,8 @@ GameSettingCollection**				GameSettingCollection::Instance = (GameSettingCollect
 
 Setting* SettingCollectionList::LookupByName( const char* Name )
 {
-	for (SettingListT::Iterator Itr = settingList.Begin(); Itr.End() == false && Itr.Get(); ++Itr)
+	tList<Setting>* List = (tList<Setting>*)&settingList;
+	for (tList<Setting>::Iterator Itr = List->Begin(); Itr.End() == false && Itr.Get(); ++Itr)
 	{
 		Setting* Current = Itr.Get();
 		SME_ASSERT(Current);

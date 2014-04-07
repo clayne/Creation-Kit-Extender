@@ -12,6 +12,7 @@ class BSFogProperty;
 class Sky;
 class TESWorldSpace;
 class NavMeshInfoMap;
+class WaterPlaneData;
 
 
 // actually BSResource::ArchiveStreamOpenedEvent
@@ -43,9 +44,10 @@ struct CellAttachDetachEvent
 // 34
 class ICellAttachDetachEventSource : public BSTEventSource<CellAttachDetachEvent>
 {
+public:
 	// members
 	//     /*00*/ void**		vtbl
-	//     /*04*/ BSTSingletonExplicit<ICellAttachDetachEventSource>	- no members, used to initialize a singleton
+	//     /*04*/ BSTSingletonExplicit<ICellAttachDetachEventSource>	- no members or vtbl, used to initialize a singleton
 	//	   /*04*/ BSTEventSource<CellAttachDetachEvent>
 
 	// no additional members
@@ -126,7 +128,7 @@ public:
 	// 8+?
 	struct CellInfo
 	{
-		/*00*/ TES::WaterPlaneData*		waterData;
+		/*00*/ WaterPlaneData*		waterData;
 		/*04*/ NiNode*					niNode;		// ### cell's node? confirm
 	};
 

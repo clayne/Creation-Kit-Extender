@@ -33,6 +33,7 @@ class TESCombatStyle;
 class TESPackage;
 class BGSTextureSet;
 class TESActorBase;
+class BGSVoiceType;
 
 // 04
 class BaseFormComponent
@@ -424,16 +425,6 @@ public:
 	//     /*00*/ BaseFormComponent
 	/*04*/ BGSLocalizedString		name;
 };
-STATIC_ASSERT(sizeof(TESEnchantableForm) == 0xC);
-
-// 0C
-class TESFullName : public BaseFormComponent
-{
-public:
-	// members
-	//     /*00*/ BaseFormComponent
-	/*04*/ BGSLocalizedString		name;
-};
 STATIC_ASSERT(sizeof(TESFullName) == 0xC);
 
 // 10
@@ -464,7 +455,7 @@ public:
 	/*09*/ UInt8					flags;
 	/*0A*/ UInt8					count;		// max = 0xFF, obviously
 	/*0B*/ UInt8					pad0B;
-	/*0C*/ TESGlobal*				global;
+	/*0C*/ TESGlobal*				global;		// overrides the chanceNone value
 };
 STATIC_ASSERT(sizeof(TESLeveledList) == 0x10);
 
