@@ -455,7 +455,7 @@ public:
 	/*09*/ UInt8					flags;
 	/*0A*/ UInt8					count;		// max = 0xFF, obviously
 	/*0B*/ UInt8					pad0B;
-	/*0C*/ TESGlobal*				global;
+	/*0C*/ TESGlobal*				global;		// overrides the chanceNone value
 };
 STATIC_ASSERT(sizeof(TESLeveledList) == 0x10);
 

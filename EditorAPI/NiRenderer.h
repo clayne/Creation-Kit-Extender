@@ -8,8 +8,10 @@ class NiRenderTargetGroup;
 class NiDX9VertexBufferManager;
 class NiD3DGeometryGroupManager;
 class NiDX9IndexBufferManager;
+class NiUnsharedGeometryGroup;
+class NiDynamicGeometryGroup;
 
-// 30+?, possibly 8 bytes larger
+// 30+?, possibly includes the first 8 bytes of NiDX9Renderer
 class NiRenderer : public NiObject
 {
 public:
@@ -51,16 +53,14 @@ public:
 	//     /*000*/ NiRenderer
 	/*030*/ UInt32								unk030;
 	/*034*/ UInt32								unk034;
-	/*038*/ UInt32								unk038;
-	/*03C*/ UInt8								unk03C[0x130];
+	/*038*/ IDirect3DDevice9*					d3dDevice;
+	/*03C*/ D3DCAPS9							deviceCaps;
 	/*16C*/ HWND								unk16C;
 	/*170*/ HWND								focusWindow;
-	/*174*/ UInt8								unk174;
-	/*175*/ UInt8								pad175[3];
-	/*178*/ UInt32								unk178[(0x374 - 0x178) >> 2];
+	/*174*/ char								rendererDebugBuffer[0x200];
 	/*374*/ UInt32								d3DAdaptor;
-	/*378*/ UInt32								unk378;							// init to 1
-	/*37C*/ UInt32								unk37C;
+	/*378*/ D3DDEVTYPE							deviceType;						
+	/*37C*/ DWORD								behaviourFlags;
 	/*380*/ UInt32								unk380;
 	/*384*/ UInt8								unk384;
 	/*385*/ UInt8								unk385;
@@ -71,9 +71,7 @@ public:
 	/*394*/ float								clearZ;							// init to 1.0
 	/*398*/ UInt32								clearStencil;
 	/*39C*/ UInt32								unk39C;
-	/*3A0*/ UInt8								unk3A0;				
-	/*3A1*/ UInt8								pad3A1[3];
-	/*3A4*/	UInt32								unk3A4[(0x3C0 - 0x3A4) >> 2];
+	/*3A0*/ char								rendererDebugBufferAux[0x20];				
 	/*3C0*/ NiTPointerMap<void*, void*>			prepackObjects;					// NiTPointerMap<class NiVBBlock *, class NiDX9Renderer::PrePackObject *>
 	/*3D0*/ UInt32								unk3D0;
 	/*3D4*/ UInt32								unk3D4;
@@ -106,8 +104,8 @@ public:
 	/*649*/ UInt8								unk649;
 	/*64A*/ UInt16								pad64A;
 	/*64C*/ NiD3DGeometryGroupManager*			geometryGroupManager;
-	/*650*/ void*								unk650;						
-	/*654*/ void*								unk654;						
+	/*650*/ NiUnsharedGeometryGroup*			unsharedGeometryGroup;						
+	/*654*/ NiDynamicGeometryGroup*				dynamicGeometryGroup;						
 	/*658*/ NiDX9VertexBufferManager*			vertexBufferManager;
 	/*65C*/ NiDX9IndexBufferManager*			indexBufferManager;	
 	/*660*/ NiTPointerMap<void*, void*>			renderedTextureDataMap;			// NiTPointerMap<class NiRenderedTexture *, class NiDX9RenderedTextureData *>
@@ -138,6 +136,7 @@ public:
 	/*864*/ NiTMap<void*, void*>				d3DPixelFormatMap;					// NiTMap<enum  _D3DFORMAT, class NiPixelFormat *>
 	/*874*/ UInt32								unk874[(0x880 - 0x874) >> 2];
 };
+STATIC_ASSERT(offsetof(NiDX9Renderer, unk3D0) == 0x3D0);
 STATIC_ASSERT(offsetof(NiDX9Renderer, unk75C) == 0x75C);
 STATIC_ASSERT(sizeof(NiDX9Renderer) == 0x880);
 STATIC_ASSERT(sizeof(NiDX9Renderer::Unk4A4T) == 0x54);
