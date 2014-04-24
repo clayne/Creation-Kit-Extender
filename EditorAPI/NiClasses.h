@@ -10,7 +10,7 @@ public:
 
 	// members
 	//     /*00*/ void**        vtbl;
-	/*04*/ UInt32				m_unk04;	// not present in Oblivion
+	/*04*/ UInt32				m_unk04;	// not present in Oblivion, an offset of sorts, added in New Vegas
 	/*08*/ ReadFNT				m_pfnRead;  // called to actually read from stream
 	/*0C*/ WriteFNT				m_pfnWrite; // called to actually write to stream
 

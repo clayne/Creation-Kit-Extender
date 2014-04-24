@@ -73,7 +73,7 @@ public:
 class SettingCollectionMap : public SettingCollection   // actually SettingCollectionMap<Setting*>
 {
 public:
-	typedef BSTCaseInsensitiveStringMap<Setting*>	SettingMapT;
+	typedef CreationKitExtender_OverriddenClasses::BSTCaseInsensitiveStringMap<Setting*>	SettingMapT;
 
 	// members
 	//     /*000*/ SettingCollection

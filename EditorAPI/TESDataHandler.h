@@ -176,12 +176,12 @@ public:
 															//		kFormType_Cell/AddonNode			- Only exterior cells/Always empty
 	/*68C*/ TESRegionList*									regionList;
 	/*690*/ NiTPrimitiveArray<TESObjectCELL*>				interiorCells;
-	/*6A0*/ NiTPrimitiveArray<BGSAddonNode*>				addonNodes;				// addon nodes need to have unique "indices" apparently
+	/*6A0*/ NiTPrimitiveArray<BGSAddonNode*>				addonNodes;				// add-on nodes need to have unique "indices" apparently
 	/*6B0*/ UnknownArrayT									garbageArray;			// garbage array for invalid/unsupported forms (mostly bad TESObjectREFR types)
 	/*6BC*/ UInt32											nextFormID;
 	/*6C0*/ TESFile*										activeFile;
 	/*6C4*/ PluginFileListT									fileList;				// all files in Data\ directory
-	/*6CC*/ UInt32											fileCount;				// loaded files
+	/*6CC*/ UInt32											fileCount;				// loaded file count
 	/*6D0*/ TESFile*										filesByID[0xFF];		// loaded files
 	/*ACC*/ UInt8											unkACC[3];
 	/*ACF*/ UInt8											autoSaving;

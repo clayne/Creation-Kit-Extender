@@ -255,7 +255,7 @@ extern "C"
 														BGSEditorExtender::BGSEEMain::kExtenderParentEditor_TES5CK,
 														EDITOR_VERSION_1_9_32_0,
 														SKSE->editorVersion,
-														SKSE->GetOblivionDirectory(),
+														GetSkyrimDirectory(),
 														XSEPluginHandle,
 														PANIC("SKSE passes the packed version integer - use the release index instead, needs adding to the pluginAPI")
 														PANIC("same here - pass te minimum required release index"),

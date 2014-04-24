@@ -108,7 +108,7 @@ public:
 	};
 
 	typedef BSSimpleList<GroupInfo*>					GroupListT;
-	typedef NiTPointerMap< UInt32, TESFile* >			ChildThreadFileMapT;
+	typedef CreationKitExtender_OverriddenClasses::NiTPointerMap< UInt32, TESFile* >			ChildThreadFileMapT;
 
 	// members
 	/*000*/ UInt32								errorState;

@@ -33,6 +33,7 @@ class TESCombatStyle;
 class TESPackage;
 class BGSTextureSet;
 class TESActorBase;
+class BGSVoiceType;
 
 // 04
 class BaseFormComponent
@@ -413,16 +414,6 @@ public:
 	/*04*/ EnchantmentItem*			enchantment;
 	/*08*/ UInt16					enchantmentType;
 	/*0A*/ UInt16					maxCharge;
-};
-STATIC_ASSERT(sizeof(TESEnchantableForm) == 0xC);
-
-// 0C
-class TESFullName : public BaseFormComponent
-{
-public:
-	// members
-	//     /*00*/ BaseFormComponent
-	/*04*/ BGSLocalizedString		name;
 };
 STATIC_ASSERT(sizeof(TESEnchantableForm) == 0xC);
 

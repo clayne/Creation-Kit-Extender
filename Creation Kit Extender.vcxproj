@@ -54,13 +54,13 @@
     <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
     <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BGSEEBaseLibPath_DEBUG);$(DirectXLibPath);$(CrashRptLibPath);$(BoostLibPath);$(LibraryPath)</LibraryPath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BGSEEBaseIncludePath);$(BGSEEBaseIncludePath)\BGSEEScript\;$(DirectXIncludePath);$(BoostIncludePath);$(CrashRptIncludePath);$(XSECommonIncludePath);$(SMESundriesIncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BGSEEBaseLibPath_DEBUG);$(DirectXLibPath);$(CrashRptLibPath);$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BGSEEBaseIncludePath);$(BGSEEBaseIncludePath)\BGSEEScript\;$(XSECommonIncludePath);$(DirectXIncludePath);$(SMESundriesIncludePath);$(BoostIncludePath);$(CrashRptIncludePath);$(IncludePath)</IncludePath>
     <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SourcePath)</SourcePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BGSEEBaseIncludePath);$(BGSEEBaseIncludePath)\BGSEEScript\;$(DirectXIncludePath);$(BoostIncludePath);$(CrashRptIncludePath);$(XSECommonIncludePath);$(SMESundriesIncludePath);$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BGSEEBaseIncludePath);$(BGSEEBaseIncludePath)\BGSEEScript\;$(XSECommonIncludePath);$(DirectXIncludePath);$(SMESundriesIncludePath);$(BoostIncludePath);$(CrashRptIncludePath);$(IncludePath)</IncludePath>
     <SourcePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SourcePath)</SourcePath>
     <EnableManagedIncrementalBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableManagedIncrementalBuild>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BGSEEBaseLibPath_RELEASE);$(DirectXLibPath);$(CrashRptLibPath);$(BoostLibPath);$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BGSEEBaseLibPath_RELEASE);$(DirectXLibPath);$(CrashRptLibPath);$(LibraryPath)</LibraryPath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ExecutablePath)</ExecutablePath>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
@@ -84,6 +84,7 @@
       </UndefinePreprocessorDefinitions>
       <Optimization>Disabled</Optimization>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>ComCtl32.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
