@@ -54,7 +54,7 @@ namespace CreationKitExtender
 	{
 		BGSEECONSOLE_MESSAGE("Initializing Hooks");
 		BGSEECONSOLE->Indent();
-		TODO("Kommt hier Dinge")
+		TODO("Hier kommen Dinge")
 		BGSEECONSOLE->Exdent();
 
 		BGSEECONSOLE_MESSAGE("Initializing UI Manager");
@@ -258,7 +258,7 @@ extern "C"
 														GetSkyrimDirectory(),
 														XSEPluginHandle,
 														PANIC("SKSE passes the packed version integer - use the release index instead, needs adding to the pluginAPI")
-														PANIC("same here - pass te minimum required release index"),
+														PANIC("same here - pass the minimum required release index"),
 														CKEINISettings,
 														"v4.0.30319",
 #ifdef NDEBUG
